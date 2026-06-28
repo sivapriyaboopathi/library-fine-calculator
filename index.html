@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Library Fine Calculator</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header>
+<h1>
+<i class="fa-solid fa-book"></i>
+SMART LIBRARY FINE CALCULATOR
+</h1>
+<div class="top-bar">
+<div id="currentDate"></div>
+<div id="clock"></div>
+</div>
+</header>
+<div class="container">
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
+        <div class="card">
+            <h2><i class="fa-solid fa-user"></i> Student Details</h2>
+            <div class="input-group">
+                <label>Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter Student Name">
+            </div>
+            <div class="input-group">
+                <label>Register Number</label>
+                <input type="text" id="registerNumber" placeholder="Enter Register Number">
+            </div>
+            <div id="extraBooks"></div>
+<div class="buttons">
+    <button type="button" id="addBookBtn">
+        <i class="fa-solid fa-plus"></i> Add Book
+    </button>
+</div>
+            <div class="buttons">
+    <button type="button" id="addBookBtn">
+        <i class="fa-solid fa-plus"></i> Add Book
+    </button>
+</div>
+<div id="extraBooks"></div>
+            <div class="input-group">
+                <label>Issue Date</label>
+                <input type="date" id="issueDate">
+            </div>
+<div class="input-group">
+    <label>Due Date</label>
+    <input type="date" id="dueDate" readonly>
+</div>
+            <div class="input-group">
+                <label>Return Date</label>
+                <input type="date" id="returnDate">
+            </div>
+            <div class="buttons">
+                <button id="calculateBtn">
+                    <i class="fa-solid fa-calculator"></i> Calculate Fine
+                </button>
+                <button id="resetBtn">
+                    <i class="fa-solid fa-rotate-left"></i> Reset
+                </button>
+            </div>
+            <div class="buttons">
+                <button id="saveBtn">
+                    <i class="fa-solid fa-floppy-disk"></i> Save
+                </button>
+                <button id="printBtn">
+                    <i class="fa-solid fa-print"></i> Print
+                </button>
+                <button id="pdfBtn">
+                    <i class="fa-solid fa-file-pdf"></i> PDF
+                </button>
+                <button id="excelBtn">
+    <i class="fa-solid fa-file-excel"></i> Excel
+</button>
+            </div>
+        </div>
+    </div>
+    <!-- RIGHT SIDE -->
+    <div class="right-panel">
+        <div class="card">
+            <h2><i class="fa-solid fa-chart-column"></i> Fine Summary</h2>
+            <div class="result">
+                <p>Borrowed Days : <span id="days">0</span></p>
+                <p>Extra Days : <span id="extraDays">0</span></p>
+                <p>Fine : ₹<span id="fine">0</span></p>
+                <p>Status : <span id="status">No Fine</span></p>
+            </div>
+        </div>
+        <div class="card">
+            <h2><i class="fa-solid fa-magnifying-glass"></i> Search Records</h2>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by Name or Register Number">
+        </div>
+        <div class="card">
+            <h2><i class="fa-solid fa-table"></i> Fine History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Reg No</th>
+                        <th>Book No</th>
+                        <th>Book</th>
+                        <th>Days</th>
+                        <th>Fine</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
